@@ -109,6 +109,14 @@ Which would pull-replicate the filesystem from the remote host to the local syst
 
 Syncoid supports recursive replication (replication of a dataset and all its child datasets) and uses mbuffer buffering, lzop compression, and pv progress bars if the utilities are available on the systems used.
 
+##### Syncoid Dataset Properties
+
++ syncoid:no-sync
+
+  Setting this to `true` will prevent the dataset from being handled by syncoid in _any_ way - it will be skipped. This can be useful for preventing certain datasets from being transferred when recursively handling a tree.
+
+  Note that this will also prevent syncoid from handling the dataset if given explicitly on the command line.
+
 ##### Syncoid Command Line Options
 
 + [source]
